@@ -122,11 +122,7 @@
 
       <!-- Navigation Tabs -->
       <nav class="flex space-x-6 overflow-x-auto border-t border-slate-100 scrollbar-none text-sm font-medium text-slate-600">
-        <button onclick="switchTab('tab-overview')" id="nav-tab-overview" class="py-3 px-1 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap flex items-center gap-2 tab-active">
-          <i class="fa-solid fa-clipboard-check"></i>
-          <span>Case Study Q&A Answers</span>
-        </button>
-        <button onclick="switchTab('tab-sales')" id="nav-tab-sales" class="py-3 px-1 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap flex items-center gap-2">
+        <button onclick="switchTab('tab-sales')" id="nav-tab-sales" class="py-3 px-1 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap flex items-center gap-2 tab-active">
           <i class="fa-solid fa-chart-column"></i>
           <span>Sales & Marketing Funnel</span>
         </button>
@@ -142,6 +138,10 @@
           <i class="fa-solid fa-scale-balanced"></i>
           <span>Option A vs B Strategy</span>
         </button>
+        <button onclick="switchTab('tab-overview')" id="nav-tab-overview" class="py-3 px-1 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap flex items-center gap-2">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <span>Case Study & Q&A Answers</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -152,7 +152,7 @@
     <!-- ========================================== -->
     <!-- TAB 1: EXECUTIVE OVERVIEW & Q&A ANSWERS -->
     <!-- ========================================== -->
-    <div id="tab-overview" class="space-y-6">
+    <div id="tab-overview" class="hidden space-y-6">
       <!-- Top Alert Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
@@ -302,7 +302,7 @@
     <!-- ========================================== -->
     <!-- TAB 2: SALES & MARKETING FUNNEL -->
     <!-- ========================================== -->
-    <div id="tab-sales" class="hidden space-y-6">
+    <div id="tab-sales" class="space-y-6">
       <!-- Sales & Marketing KPIs -->
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
