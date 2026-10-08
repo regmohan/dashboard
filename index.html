@@ -102,7 +102,8 @@
           </a>
 
           <div class="flex items-center gap-2 border-l border-slate-200 pl-3">
-            <span class="w-8 h-8 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold" id="userAvatar">MR</span>
+            <img src="./profile.jpg" alt="Mohan Regmi" class="w-8 h-8 rounded-full object-cover border border-slate-300 shadow-xs" onerror="this.style.display='none'; document.getElementById('userAvatarFallback').style.display='flex';">
+            <span id="userAvatarFallback" class="w-8 h-8 rounded-full bg-slate-200 text-slate-700 items-center justify-center text-xs font-bold hidden">MR</span>
             <button id="logoutBtn" title="Logout" class="text-slate-400 hover:text-rose-600 text-sm p-1.5 transition">
               <i class="fa-solid fa-right-from-bracket"></i>
             </button>
