@@ -57,10 +57,10 @@
             <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
               <i class="fa-solid fa-lock"></i>
             </span>
-            <input type="password" id="passcode" placeholder="Enter passcode or click Quick Demo" 
+            <input type="password" id="passcode" placeholder="Enter password" 
               class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
           </div>
-          <p id="authError" class="text-xs text-rose-600 mt-1.5 hidden"><i class="fa-solid fa-circle-exclamation mr-1"></i> Invalid passcode. Use "spark" or click Quick Demo.</p>
+          <p id="authError" class="text-xs text-rose-600 mt-1.5 hidden"><i class="fa-solid fa-circle-exclamation mr-1"></i> Incorrect password. Please try again.</p>
         </div>
 
         <button type="submit" class="w-full bg-brand-navy hover:bg-slate-900 text-white font-medium py-2.5 rounded-xl text-sm transition shadow-sm flex items-center justify-center gap-2">
@@ -69,17 +69,7 @@
         </button>
       </form>
 
-      <div class="relative my-6">
-        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200"></div></div>
-        <div class="relative flex justify-center text-xs uppercase"><span class="bg-white px-3 text-slate-400 font-medium">Quick Access</span></div>
-      </div>
-
-      <button id="guestLoginBtn" type="button" class="w-full bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold py-2.5 rounded-xl text-sm border border-brand-200 transition flex items-center justify-center gap-2">
-        <i class="fa-solid fa-users-viewfinder"></i>
-        <span>Instant View (Team / Public Mode)</span>
-      </button>
-
-      <p class="text-xs text-center text-slate-400 mt-5">
+      <p class="text-xs text-center text-slate-400 mt-6">
         Prepared by <strong class="text-slate-600">Mohan Regmi</strong> | Data Analyst / MIS Portfolio
       </p>
     </div>
@@ -714,7 +704,6 @@
     const loginForm = document.getElementById('loginForm');
     const passcode = document.getElementById('passcode');
     const authError = document.getElementById('authError');
-    const guestLoginBtn = document.getElementById('guestLoginBtn');
     const logoutBtn = document.getElementById('logoutBtn');
 
     // Check existing session
@@ -730,10 +719,6 @@
       } else {
         authError.classList.remove('hidden');
       }
-    });
-
-    guestLoginBtn.addEventListener('click', () => {
-      grantAccess();
     });
 
     logoutBtn.addEventListener('click', () => {
